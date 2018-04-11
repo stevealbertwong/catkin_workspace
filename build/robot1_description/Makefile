@@ -78,38 +78,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -120,6 +88,16 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -132,6 +110,28 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,36 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-robot1_description/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot1_description/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : robot1_description/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: robot1_description/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f robot1_description/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make robot1_description/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
 robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule:
 	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
@@ -209,51 +179,6 @@ _catkin_empty_exported_target: robot1_description/CMakeFiles/_catkin_empty_expor
 _catkin_empty_exported_target/fast:
 	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
-
-# Convenience name for target.
-robot1_description/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot1_description/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : robot1_description/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_eus: robot1_description/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-.PHONY : nav_msgs_generate_messages_eus
-
-# fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f robot1_description/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make robot1_description/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-robot1_description/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot1_description/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : robot1_description/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: robot1_description/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f robot1_description/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make robot1_description/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-robot1_description/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot1_description/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : robot1_description/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: robot1_description/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/steve/dev/catkin_ws/build && $(MAKE) -f robot1_description/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make robot1_description/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule:
@@ -320,19 +245,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... test"
-	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... nav_msgs_generate_messages_py"
+	@echo "... _catkin_empty_exported_target"
 	@echo "... robot1_description_xacro_generated_to_devel_space_"
 	@echo "... state_publisher_tutorials"
+	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... src/state_publisher.o"
 	@echo "... src/state_publisher.i"
 	@echo "... src/state_publisher.s"
