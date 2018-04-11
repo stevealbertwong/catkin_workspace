@@ -5,8 +5,10 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(move_base_msgs)
 subdirs(ch3)
 subdirs(chapter2_tutorials)
 subdirs(chapter5_tutorials)
+subdirs(chapter6_tutorials)
 subdirs(amcl)
 subdirs(robot1_description)

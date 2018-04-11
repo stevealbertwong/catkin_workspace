@@ -117,9 +117,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/steve/dev/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/steve/dev/catkin_ws/build/move_base_msgs/cmake_install.cmake")
   include("/home/steve/dev/catkin_ws/build/ch3/cmake_install.cmake")
   include("/home/steve/dev/catkin_ws/build/chapter2_tutorials/cmake_install.cmake")
   include("/home/steve/dev/catkin_ws/build/chapter5_tutorials/cmake_install.cmake")
+  include("/home/steve/dev/catkin_ws/build/chapter6_tutorials/cmake_install.cmake")
   include("/home/steve/dev/catkin_ws/build/amcl/cmake_install.cmake")
   include("/home/steve/dev/catkin_ws/build/robot1_description/cmake_install.cmake")
 
