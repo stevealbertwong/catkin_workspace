@@ -1,0 +1,8 @@
+prefix=/home/steve/dev/catkin_ws/devel
+
+Name: ch3
+Description: Description of ch3
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/steve/dev/catkin_ws/devel/lib 
+Requires: 

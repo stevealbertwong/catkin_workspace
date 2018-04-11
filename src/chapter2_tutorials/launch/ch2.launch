@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+	<node name ="ex1a" pkg="chapter2_tutorials" type="ex1a"/>
+	<node name ="ex1b" pkg="chapter2_tutorials" type="ex1b"/>
+</launch> 
