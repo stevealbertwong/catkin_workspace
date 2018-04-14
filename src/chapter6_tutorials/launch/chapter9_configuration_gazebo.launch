@@ -17,7 +17,16 @@
   	<param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
 
   	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node>
-  	<!-- start robot state publisher -->
+  	
+  <!--
+  2 things to run robot state publisher:
+  
+  A urdf xml robot description loaded on the Parameter Server.
+
+  A source that publishes the joint positions as a sensor_msgs/JointState.
+
+  like “static_transform_publisher“ publish frame transform
+  -->
  	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
 
 	<node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -z 0.1 -model robot_model" respawn="false" output="screen" />
