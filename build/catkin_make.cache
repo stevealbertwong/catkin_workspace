@@ -1,2 +1,2 @@
-amcl:ch3:chapter2_tutorials:chapter5_tutorials:chapter6_tutorials:move_base_msgs:robot1_description
+amcl:ch3:chapter2_tutorials:chapter5_tutorials:chapter6_tutorials:learning_tf:move_base_msgs:robot1_description
 -DCATKIN_DEVEL_PREFIX=/home/steve/dev/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/steve/dev/catkin_ws/install -G Unix Makefiles
